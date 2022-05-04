@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 7px 15px rgba(104. 104, 104, 0.8);
+}
+
+.wrapper {
+    display: grid;
+    gap: 20px;
+}
+
+header h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+header p {
+    text-align: center;
+    font-style: italic;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    margin: 20px 20px;
+    line-height: 1.4em;
+}
+
+.main-nav ul {
+    display: grid;
+    gap: 200px;
+    padding: 10px;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main-nav a {
+    background: linear-gradient(to right, #37232F, #A7A397,#F8F4F2);
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem;
+    text-align: center;
+    color: #0830a0;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: var(--shadow);
+    border-radius: 20px 20px 20px 20px;
+    /*border-radius: 50%;*/
+}
+
+.main-nav a:hover {
+    background: linear-gradient(to right, #F8F4F2, #A7A397, #37232F);
+    color: var(--light);
+    border-radius: 0px 70% 70% 0px;
+}
+
+header h2:hover {
+    color:#3c6df1;
+}
+
+header p:hover {
+    color:#0f5721;
+}
+
+
+/*
+body {
+    margin: 0;
+    height: 100vh;
+}
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+    grid-template-areas: "grid-head grid-head grid-head" "grid-main grid-main grid-main" "grid-main grid-main grid-main" "grid-footer grid-footer grid-footer";
+    height: 100vh;
+    margin: 1em;    
+}
+
+section.grid-head {
+    grid-area: grid-head;
+    background: linear-gradient(to right, #6EA0D5, #CAE3FF);
+    border-radius: 25px 25px 0px 0px;
+}
+
+section.grid-main {
+    grid-area: grid-main;
+    background: #fffadf;
+    background-image: url('../images/rc.jpg');
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+section.grid-footer {
+    grid-area: grid-footer;
+    background: linear-gradient(#B0A89B, #4C555C);
+}
+
+.footer-text {
+    margin-left: 20px;
+}
